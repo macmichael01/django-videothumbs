@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-
+django-videothumbs
 """
 
 import cStringIO
@@ -169,7 +169,7 @@ class VideoThumbField(FileField):
     """
     Usage example:
     ==============
-    video = VideoThumbField(upload_to='images', sizes=((125,125),(300,200),)
+    video = VideoThumbField(upload_to='videos', sizes=((125,125),(300,200),))
 
     To retrieve video URL, exactly the same way as with FileField:
         my_object.video.url
@@ -185,27 +185,15 @@ class VideoThumbField(FileField):
     For each size in the 'sizes' atribute of the field it generates a 
     thumbnail with that size and stores it following this format:
 
-    available_filename.[width]x[height].extension
+    filename.[width]x[height].extension
 
-    Where 'available_filename' is the available filename returned by the storage
-    backend for saving the original file.
-
-    Following the usage example above: For storing a file called "photo.jpg" it saves:
+    For storing a file called "video.mpeg" it saves:
     video.mpeg          (original file)
     video.125x125.jpg  (first thumbnail)
     video.300x200.jpg  (second thumbnail)
 
-    With the default storage backend if photo.jpg already exists it will use these filenames:
-    video_.jpg
-    video_.125x125.jpg
-    video_.300x200.jpg
-
-    Note: django-thumbs assumes that if filename "any_filename.jpg" is available 
-    filenames with this format "any_filename.[widht]x[height].jpg" will be available, too.
-
-    To do:
-    ======
-    Add method to regenerate thubmnails
+    Note: django-videothumbs assumes that if filename "filename.jpg" is available 
+    filenames with this format "filename.[widht]x[height].jpg" will be available, too.
 
     """
     def __init__(self, verbose_name=None, name=None, width_field=None, height_field=None, sizes=None, **kwargs):
