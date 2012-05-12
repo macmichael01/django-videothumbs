@@ -44,9 +44,8 @@ recommended for use in a production setting just yet.
         - my_object.video.url_300x200
 
 
-
     from videothumbs import VideoThumbField
-
+    
     class HomeVideo(models.Model):
         video = VideoThumbField(upload_to='home_videos', thumb_sizes=((80,80),))
 
