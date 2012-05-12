@@ -5,6 +5,19 @@ Auto generate video thumbnails on the fly.
 NOTE: This is only a proof of concept at this point. And is not 
 recommended for use in a production setting just yet.
 
+**REQUIREMENTS**
+
+    pip install Django==1.3 # or newer
+    pip install PIL
+    
+    # ffmepg (Debian)
+    sudo apt-get install ffmpeg
+    
+    # Mac
+    # Download ffmpegX and follow instructions on how to install.
+    # Then symlink the ffmpeg binary so that a terminal shell can find it.
+    sudo ln -s /Applications/ffmpegX.app/Contents/Resources/ffmpeg /usr/local/bin/
+
 **INSTALLATION**
 
     pip install django-videothumbs
