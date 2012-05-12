@@ -32,22 +32,24 @@ recommended for use in a production setting just yet.
 **USAGE**
 
 - Arguments:
-    *upload_to* - Path where the videos and thumbnails will be stored.
+    - *upload_to* - Path where the videos and thumbnails will be stored.
         The defining path will contain 2 subfolders, thumbnails and videos.
-    *sizes* - list of tuples containing width and height coordinates to
+    - *sizes* - list of tuples containing width and height coordinates to
         size a video frame to.
 - Retrieval:
     - To retrieve the video URL:
-        my_object.video.url
+        - my_object.video.url
     - To retrieve thumbnails URL's just append the dimensions:
-        my_object.video.url_125x125
-        my_object.video.url_300x200
+        - my_object.video.url_125x125
+        - my_object.video.url_300x200
+
 
 
     from videothumbs import VideoThumbField
 
     class HomeVideo(models.Model):
         video = VideoThumbField(upload_to='home_videos', thumb_sizes=((80,80),))
+
 
 **TODO**
 
