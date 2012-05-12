@@ -5,7 +5,6 @@ from setuptools import find_packages
 
 
 setup(name='python-twitpic',
-    install_requires=('python-imaging',),
     description='DjangoVideoThumbs',
     author='Chris McMichael',
     author_email='macmichael01@gmail.com',
