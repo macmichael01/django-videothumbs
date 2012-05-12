@@ -24,24 +24,25 @@ recommended for use in a production setting just yet.
 
     OR
 
-    git clone https://github.com/macmichael01/django-base;
-    cd django-base;
+    git clone https://github.com/macmichael01/django-videothumbs;
+    cd django-videothumbs;
     sudo python setup.py install;
 
 
 **USAGE**
 
-    - Arguments:
-        *upload_to* - Path where the videos and thumbnails will be stored.
-            The defining path will contain 2 subfolders, thumbnails and videos.
-        *sizes* - list of tuples containing width and height coordinates to
-            size a video frame to.
-    - Retrieval:
-        - To retrieve the video URL:
-            my_object.video.url
-        - To retrieve thumbnails URL's just append the dimensions:
-            my_object.video.url_125x125
-            my_object.video.url_300x200
+- Arguments:
+    *upload_to* - Path where the videos and thumbnails will be stored.
+        The defining path will contain 2 subfolders, thumbnails and videos.
+    *sizes* - list of tuples containing width and height coordinates to
+        size a video frame to.
+- Retrieval:
+    - To retrieve the video URL:
+        my_object.video.url
+    - To retrieve thumbnails URL's just append the dimensions:
+        my_object.video.url_125x125
+        my_object.video.url_300x200
+
 
     from videothumbs import VideoThumbField
 
