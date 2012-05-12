@@ -4,7 +4,7 @@ from distutils.core import setup
 from setuptools import find_packages
 
 
-setup(name='python-twitpic',
+setup(name='django-videothumbs',
     description='DjangoVideoThumbs',
     author='Chris McMichael',
     author_email='macmichael01@gmail.com',

@@ -32,9 +32,9 @@ recommended for use in a production setting just yet.
 **USAGE**
 
 - Arguments:
-    - *upload_to* - Path where the videos and thumbnails will be stored.
+    - upload_to: Path where the videos and thumbnails will be stored.
         The defining path will contain 2 subfolders, thumbnails and videos.
-    - *sizes* - list of tuples containing width and height coordinates to
+    - sizes: list of tuples containing width and height coordinates to
         size a video frame to.
 - Retrieval:
     - To retrieve the video URL:
