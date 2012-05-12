@@ -2,7 +2,7 @@
 
 Auto generate video thumbnails on the fly.
 
-NOTE: This is only a proof of concept at this point. And is not 
+*NOTE*: This is only a proof of concept at this point. And is not 
 recommended for use in a production setting just yet.
 
 **REQUIREMENTS**
@@ -32,10 +32,12 @@ recommended for use in a production setting just yet.
 **USAGE**
 
 - Arguments:
-    - upload_to: Path where the videos and thumbnails will be stored.
-        The defining path will contain 2 subfolders, thumbnails and videos.
-    - sizes: list of tuples containing width and height coordinates to
-        size a video frame to.
+    - upload_to
+        - Path where the videos and thumbnails will be stored. The defining path will contain 2 subfolders, thumbnails and videos.
+    - sizes
+        - A List of tuples containing width and height coordinates to size a video frame to.
+    - auto_crop
+        - During generation, if height and width of a thumbnail are the same the option to crop is available. True by default.
 - Retrieval:
     - To retrieve the video URL:
         - my_object.video.url
@@ -44,10 +46,10 @@ recommended for use in a production setting just yet.
         - my_object.video.url_300x200
 
 
-    from videothumbs import VideoThumbField
+    from videothumbs.fields import VideoThumbnailField
     
     class HomeVideo(models.Model):
-        video = VideoThumbField(upload_to='home_videos', thumb_sizes=((80,80),))
+        video = VideoThumbnailField(upload_to='home_videos', sizes=((80,80),))
 
 
 **TODO**
